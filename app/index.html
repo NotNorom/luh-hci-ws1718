@@ -2,13 +2,27 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Meaningful Interactive Lecture Feedback System</title>
+    <title>Start | Meaningful Interactive Lecture Feedback System</title>
 
     <link rel="stylesheet" type="text/css" href="/css/main.css">
 
     <script type="text/javascript" src="/js/main.js"></script>
 </head>
 <body>
-
+    <div class="notification" hidden></div>
+    <header>
+        <h1>Aktueller Eindruck</h1>
+    </header>
+    <main>
+        <ul class="buttonlist">
+            <li class="button">leicht</li>
+            <li class="button">schwer</li>
+            <li class="button">langsam</li>
+            <li class="button">schnell</li>
+            <li class="button">interessant</li>
+        </ul>
+        <hr>
+        <canvas class="graph"></canvas>
+    </main>
 </body>
 </html>
