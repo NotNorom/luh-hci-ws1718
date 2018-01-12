@@ -47,9 +47,10 @@ form.login {
     justify-self: center;
     padding: 2vmin;
 }
-form.login > button,
-form.login > input,
-form.login > label {
+
+form.login>button,
+form.login>input,
+form.login>label {
     border: none;
     box-sizing: border-box;
     font-size: calc(16px + 1vmin);
@@ -59,7 +60,7 @@ form.login > label {
     width: 100%;
 }
 
-form.login > button {
+form.login>button {
     background: #fb8c00;
     color: #212121;
 }
