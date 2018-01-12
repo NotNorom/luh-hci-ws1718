@@ -1,10 +1,11 @@
 /*
 https://www.materialui.co/colors
+https://material.io/color/#!/?view.left=0&view.right=0&primary.color=1775d1&secondary.color=FB8C00&primary.text.color=ffffff
  */
 
 body {
     background: #EEEEEE;
-    color: #424242;
+    color: #fff;
     font-family: Verdana, Geneva, sans-serif;
     height: 100vh;
     margin: 0;
@@ -14,7 +15,7 @@ body {
 }
 
 header {
-    background: #FAFAFA;
+    background: #1775d1;
     width: 100vw;
     height: 10vh;
 }
@@ -27,14 +28,13 @@ h1 {
 }
 
 main {
-    background-color: #FAFAFA;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 0px;
     grid-auto-rows: 42.5vh;
-    grid-template-areas: 
-        ". a a ."
-        ". a a .";
+    grid-template-areas:
+        ". a a a a ."
+        ". a a a a .";
     margin: 2.5vh auto;
     height: 85vh;
     width: 95vw;
@@ -42,7 +42,7 @@ main {
 
 form.login {
     align-self: center;
-    background-color: #42A5F5;
+    background-color: #1775d1;
     grid-area: a;
     justify-self: center;
     padding: 2vmin;
@@ -57,4 +57,9 @@ form.login > label {
     padding: 0;
     height: 10vmin;
     width: 100%;
+}
+
+form.login > button {
+    background: #fb8c00;
+    color: #212121;
 }
