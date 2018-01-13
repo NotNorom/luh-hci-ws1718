@@ -1,31 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>WoZ</title>
-<script type="text/javascript" src=""></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start | Meaningful Interactive Lecture Feedback System</title>
+
+    <!--<link rel="stylesheet" type="text/css" href="/css/main.css">-->
 </head>
-<body>
+<body class="wizard">
+    <header>
+        <h1>Wizard Interface</h1>
+    </header>
+    <main>
+    	<h2>Output</h2>
+        <form>
+          <input type="button" value="Create DB" id="create" onclick="createDB();"><br/>
+        </form>
 
-<h1>Wizard Interface</h1>
+        <form>
+        	<label for="random_session_id">Session ID:</label>
+        	<input type="text" name="randomSessionId" id="random_session_id" oninput=""><br/>
 
-<form>
-  <input type="button" value="Create DB" id="create" onclick="createDB();"><br/>
-</form> 
+        	<label for="notification_setup">Benachrichtigung:</label>
+        	<div id="notification_setup">
+        		<input type="checkbox" id="notification_checkbox" onclick="">Push-Benachrichtigung anzeigen<br/>
+        		<textarea name="notification_text" rows="4" cols="90" id="notification_text" oninput=""></textarea>
+        	</div>
 
-<form>
-  <!-- http://www.w3schools.com/tags/ref_eventattributes.asp -->
-  <input type="radio" name="animalImage" value="cat.jpg" onclick="set('animal');" checked>Cat<br/>
-  <input type="radio" name="animalImage" value="dog.jpg" onclick="set('animal');">Dog<br/>
-  <input type="range" id="animalWidth" min="10" max="500" onchange="set('animal');" oninput="set('animal');"><br/>
-</form> 
+        	<label for="vote">Abstimmung:</label>
+        	<input type="checkbox" name="vote" id="vote" oninput="">Abstimmung anzeigen<br/>
 
-<br/>
+        	<label for="vote_results"></label>
+        	<div id="vote_results">
+        		<label for="easy">leicht:</label>
+        		<input type="number" min="0" id="easy"><br/>
+        		<label for="difficult">schwer:</label>
+        		<input type="number" min="0" id="difficult"><br/>
+        		<label for="slow">langsam:</label>
+        		<input type="number" min="0" id="slow"><br/>
+        		<label for="fast">schnell:</label>
+        		<input type="number" min="0" id="fast"><br/>
+        		<label for="interesting">interessant:</label>
+        		<input type="number" min="0" id="interesting"><br/>
+        	</div>
+        	
 
-<form>
-  <input type="button" value="Count" id="counter" onclick="set('counter');"><br/>
-  <input type="checkbox" checked id="showCounter" onclick="set('showCounter');">Show counter<br/>
-  <input type="text" name="mytext" id="mytext" oninput="set('mytext')"><br/>
-</form> 
+        </form>
 
+
+
+    </main>
 </body>
 </html>
