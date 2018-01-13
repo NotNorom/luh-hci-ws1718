@@ -16,6 +16,7 @@ body {
 
 header {
     background: #1775d1;
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.2);
     width: 100vw;
     height: 10vh;
 }
@@ -46,9 +47,10 @@ main {
 .login form {
     align-self: center;
     background-color: #1775d1;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
     grid-area: a;
     justify-self: center;
-    padding: 2vmin;
+    padding: 2vmin 3vmin;
 }
 
 .login form>button,
@@ -64,6 +66,20 @@ main {
 }
 
 .login form>button {
-    background: #fb8c00;
-    color: #212121;
+    background: rgba(0, 0, 127, 0.2);
+    color: #fff;
+    transition: all 0.1s ease-in-out;
+}
+
+.login form>button:hover {
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    background: rgba(0, 0, 127, 0.3);
+}
+
+.login form>button:active {
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    background: rgba(0, 0, 127, 0.3);
+    transform: translate(0px, 1vmin);
 }
