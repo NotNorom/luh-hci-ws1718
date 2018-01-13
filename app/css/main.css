@@ -99,13 +99,22 @@ LOGIN PAGE
 START PAGE
  */
 
+.start main {
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+}
+
 .start .buttons {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 1vmin;
 }
 
-.start #graph {
+.start .buttons button {
+    box-sizing: border-box;
+    padding: 0 1vmin;
+}
+
+.start .graph-wrapper {
     height: 70vh;
-    width: 100%;
 }

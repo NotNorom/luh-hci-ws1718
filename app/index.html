@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Start | Meaningful Interactive Lecture Feedback System</title>
 
     <link rel="stylesheet" type="text/css" href="/css/main.css">
@@ -22,7 +23,9 @@
             <button>schnell</button>
             <button>interessant</button>
         </div>
-        <canvas class="graph" id="graph"></canvas>
+        <div class="graph-wrapper">
+            <canvas class="graph" id="graph"></canvas>
+        </div>
         <script type="text/javascript">
 var ctx = document.getElementById("graph").getContext('2d');
 var myChart = new Chart(ctx, {
@@ -50,7 +53,7 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
-        responsive: false,
+        responsive: true,
         maintainAspectRatio: false,
         scales: {
             yAxes: [{
