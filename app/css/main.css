@@ -60,6 +60,18 @@ button:active, button:focus {
     transform: translate(0px, 1vmin);
 }
 
+button.fab {
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.2);
+    background: #c51162;
+    position: fixed;
+    color: #fff;
+    bottom: 4vh;
+    right: 2vw;
+    height: calc(16px + 6vmin);
+    width: calc(16px + 6vmin);
+    border-radius: 100%;
+}
+
 form>button,
 form>input,
 form>label {
@@ -149,4 +161,62 @@ ABSTIMMUNG PAGE
 
 .abstimmung fieldset {
     border: none;
+}
+
+/******************************
+COLORS
+ ******************************/
+
+.blue1 {
+    background-color: rgba(92, 107, 192, 1);
+    color: #fff;
+}
+
+.blue1:hover {
+    background-color: rgba(92, 107, 192, 0.6);
+}
+
+.blue2 {
+    background-color: rgba(121, 134, 203, 1);
+    color: #fff;
+}
+
+.blue2:hover {
+    background-color: rgba(121, 134, 203, 0.6);
+}
+
+.red1 {
+    background-color: rgba(239, 83, 80, 1);
+    color: #fff;
+}
+
+.red1:hover {
+    background-color: rgba(239, 83, 80, 0.6);
+}
+
+.red2 {
+    background-color: rgba(229, 115, 115, 1);
+    color: #fff;
+}
+
+.red2:hover {
+    background-color: rgba(229, 115, 115, 0.6);
+}
+
+.green1 {
+    background-color: rgba(102, 187, 106, 1);
+    color: #fff;
+}
+
+.green1:hover {
+    background-color: rgba(102, 187, 106, 0.6);
+}
+
+.green2 {
+    background-color: rgba(129, 199, 132, 1);
+    color: #fff;
+}
+
+.green2:hover {
+    background-color: rgba(129, 199, 132, 0.6);
 }

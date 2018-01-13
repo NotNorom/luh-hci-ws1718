@@ -17,15 +17,16 @@
     </header>
     <main>
         <div class="buttons">
-            <button>leicht</button>
-            <button>schwer</button>
-            <button>langsam</button>
-            <button>schnell</button>
-            <button>interessant</button>
+            <button class="blue1">leicht</button>
+            <button class="blue2">schwer</button>
+            <button class="red1">langsam</button>
+            <button class="red2">schnell</button>
+            <button class="green1">interessant</button>
         </div>
         <div class="graph-wrapper">
             <canvas class="graph" id="graph"></canvas>
         </div>
+        <button class="fab">+</button>
         <script type="text/javascript">
 var ctx = document.getElementById("graph").getContext('2d');
 var myChart = new Chart(ctx, {
@@ -33,21 +34,21 @@ var myChart = new Chart(ctx, {
     data: {
         labels: ["leicht", "schwer", "langsam", "schnell", "interessant"],
         datasets: [{
-            label: '# of Votes',
-            data: [12, 1, 3, 5, 2],
+            label: 'Anzahl Stimmen',
+            data: [12, 2, 4, 8, 6],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                'rgba(92, 107, 192, 0.6)',
+                'rgba(121, 134, 203, 0.6)',
+                'rgba(239, 83, 80, 0.6)',
+                'rgba(229, 115, 115, 0.6)',
+                'rgba(102, 187, 106, 0.6)'
             ],
             borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(255, 159, 64, 1)'
+                'rgba(92, 107, 192, 1)',
+                'rgba(121, 134, 203, 1)',
+                'rgba(239, 83, 80, 1)',
+                'rgba(229, 115, 115, 1)',
+                'rgba(102, 187, 106, 1)'
             ],
             borderWidth: 1
         }]
