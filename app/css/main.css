@@ -7,6 +7,7 @@ body {
     background: #EEEEEE;
     color: #fff;
     font-family: Verdana, Geneva, sans-serif;
+    font-size: calc(9px + 1vmin);
     height: 100vh;
     margin: 0;
     overflow: hidden;
@@ -35,6 +36,34 @@ main {
     width: 95vw;
 }
 
+button {
+    background: rgba(0, 0, 127, 0.2);
+    border: none;
+    box-sizing: border-box;
+    font-size: calc(1em + 1vmin);
+    height: 10vmin;
+    margin: 1vmin 0;
+    padding: 0;
+    transition: all 0.1s ease-in-out;
+}
+
+button:hover {
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    background: rgba(0, 0, 127, 0.25);
+}
+
+button:active, button:focus {
+    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    background: rgba(0, 0, 127, 0.25);
+    transform: translate(0px, 1vmin);
+}
+
+/*
+LOGIN PAGE
+ */
+
 .login main {
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 0px;
@@ -50,7 +79,7 @@ main {
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
     grid-area: a;
     justify-self: center;
-    padding: 2vmin 3vmin;
+    padding: 3vmin 4vmin;
 }
 
 .login form>button,
@@ -65,21 +94,12 @@ main {
     width: 100%;
 }
 
-.login form>button {
-    background: rgba(0, 0, 127, 0.2);
-    color: #fff;
-    transition: all 0.1s ease-in-out;
-}
+/*
+START PAGE
+ */
 
-.login form>button:hover {
-    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    background: rgba(0, 0, 127, 0.3);
-}
-
-.login form>button:active {
-    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    background: rgba(0, 0, 127, 0.3);
-    transform: translate(0px, 1vmin);
+.start .buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1vmin;
 }
