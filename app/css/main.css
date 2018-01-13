@@ -103,3 +103,8 @@ START PAGE
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 1vmin;
 }
+
+.start #graph {
+    height: 70vh;
+    width: 100%;
+}
