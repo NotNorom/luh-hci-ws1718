@@ -163,6 +163,24 @@ ABSTIMMUNG PAGE
     border: none;
 }
 
+
+/*
+NOTIFICATION
+ */
+
+.notification {
+    position: fixed;
+    background-color: #8e0038;
+    width: 100vw;
+    text-align: center;
+    padding: 3vh 0;
+    box-shadow: 0 0 2vh 0 rgba(0, 0, 0, 0.6);
+}
+
+.notification a {
+    color: #fff;
+}
+
 /******************************
 COLORS
  ******************************/
