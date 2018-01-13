@@ -87,6 +87,7 @@ LOGIN PAGE
 .login form>label {
     border: none;
     box-sizing: border-box;
+    color: #fff;
     font-size: calc(16px + 1vmin);
     margin: 1vmin 0;
     padding: 0;
