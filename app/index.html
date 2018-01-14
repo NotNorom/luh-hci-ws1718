@@ -9,6 +9,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" integrity="sha256-c0m8xzX5oOBawsnLVpHnU2ieISOvxi584aNElFl2W6M=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/popup.js"></script>
 </head>
 <body class="start">
     <div class="notification">
@@ -29,7 +30,7 @@
         <div class="graph-wrapper">
             <canvas class="graph" id="graph"></canvas>
         </div>
-        <button class="fab">+</button>
+        <button class="fab" onclick="togglePopup();">+</button>
         <div class="popup-wrapper">
             <div class="popup">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
