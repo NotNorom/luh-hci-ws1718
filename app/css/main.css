@@ -155,13 +155,51 @@ ABSTIMMUNG PAGE
 }
 
 .abstimmung form {
+    width: 60vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10vmin 10vmin;
+    grid-gap: 2vmin;
     align-self: center;
     grid-area: a;
     justify-self: center;
+    grid-template-areas:
+    "a a a a"
+    "b b b b";
 }
 
 .abstimmung fieldset {
     border: none;
+    padding: 0;
+    padding-block-start: 0;
+    padding-block-end: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+.abstimmung input[type="radio"] {
+    display: none;
+}
+
+.abstimmung input[type="radio"]:checked + label {
+    box-shadow: 0 0 0 1vmin #fff inset;
+}
+
+.abstimmung label {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 10vmin;
+    text-align: center;
+    cursor: pointer;
+}
+
+.abstimmung button {
+    padding: 2vmin;
+    margin: 0;
+    grid-area: b;
 }
 
 
@@ -283,4 +321,22 @@ COLORS
 
 .green2:hover {
     background-color: rgba(129, 199, 132, 0.6);
+}
+
+.yellow1 {
+    background-color: rgba(255,202,40 ,1);
+    color: #2c2c2c;
+}
+
+.yellow1:hover {
+    background-color: rgba(255, 202, 40, 0.6);
+}
+
+.yellow2 {
+    background-color: rgba(255, 213, 79, 1);
+    color: #2c2c2c;
+}
+
+.yellow2:hover {
+    background-color: rgba(255, 213, 79, 0.6);
 }
