@@ -171,15 +171,33 @@ NOTIFICATION
 
 .notification {
     position: fixed;
+    top: -20vh;
+    left: 0;
     background-color: #8e0038;
     width: 100vw;
     text-align: center;
-    padding: 3vh 0;
+    padding: 6vh 0;
     box-shadow: 0 0 2vh 0 rgba(0, 0, 0, 0.6);
+    transition: top 0.5s cubic-bezier(.68,-0.55,.59,1.72);
+    animation: notification-blink 2s ease-in-out 0s infinite alternate;
+}
+
+.notification.active {
+    top: 0;
+    padding: 3vh 0;
 }
 
 .notification a {
     color: #fff;
+}
+
+@keyframes notification-blink {
+  0% {
+    background: #8e0038;
+  }
+  100% {
+    background: #c51162;
+  }
 }
 
 
