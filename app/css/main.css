@@ -287,7 +287,7 @@ NOTIFICATION
     text-align: center;
     padding: 6vh 0;
     box-shadow: 0 0 2vh 0 rgba(0, 0, 0, 0.6);
-    transition: top 0.5s cubic-bezier(.68,-0.55,.59,1.72);
+    transition: all 0.5s cubic-bezier(.68,-0.55,.59,1.72);
     animation: notification-blink 2s ease-in-out 0s infinite alternate;
 }
 

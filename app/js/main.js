@@ -33,14 +33,14 @@ var intervalID = setInterval(update, 1000);
 ///////////////////////////////////////////////////////////////////////////////
 // your code below
 
-var dbname = "milf";
+var dbname = "milfs";
 var dburl = "http://127.0.0.1:5984/" + dbname + "/";
 var handlers = {
-    "session_id" : updateSessionID,
-    "notification" : showNotification,
-    "abstimmung" : showAbstimmung,
-    "statistik" : updateStatistik,
-    // add further handlers here
+    "session_id": updateSessionID,
+    "notification": showNotification,
+    "poll": showPoll,
+    "statistic": updateStatistic,
+    "comments": updateComments,
 };
 
 function updateSessionID(response) {
@@ -48,15 +48,26 @@ function updateSessionID(response) {
 }
 
 function showNotification(response) {
-    console.log("showNotification: " + response);
+    var elems = document.getElementsByClassName("notification");
+    if (response["show_notification"]) {
+        for (var i = elems.length - 1; i >= 0; i--) {
+            elems[i].classList.add("active");
+        }
+    } else {
+        for (var i = elems.length - 1; i >= 0; i--) {
+            elems[i].classList.remove("active");
+        }
+    }
 }
 
-var showCounter = true;
-
-function showAbstimmung(response) {
-    console.log("showAbstimmung: " + response);
+function showPoll(response) {
+    console.log("showPoll: " + response);
 }
 
-function updateStatistik(response) {
-    console.log("updateStatistik: " + response);
+function updateStatistic(response) {
+    console.log("updateStatistic: " + response);
+}
+
+function updateComments(response) {
+    console.log("updateComments: " + response);
 }
