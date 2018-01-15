@@ -63,16 +63,39 @@ function createDB() {
 ///////////////////////////////////////////////////////////////////////////////
 // your code below
 
-var dbname = "milf";
+var dbname = "milfs";
 var dburl = "http://127.0.0.1:5984/" + dbname + "/";
 var handlers = {
-    "session_id" : updateSessionID,
-    "notification" : showNotification,
-    "abstimmung" : showAbstimmung,
-    "statistik" : updateStatistik,
+    "session_id" : updateSessionID,     //send the session id to server
+    "notification" : showNotification,  //activate pop up (true)
+    "abstimmung" : showPoll,            //Poll boolean == true
+    "statistik" : updateStatistic,      //send the characteristic
     // add further handlers here
 };
 
+function updateSessionID(response){
+    put(response,{"SessionID": document.getElementById("sessionid").value});
+}
+
+function showNotification(response){
+    put(response,{"ShowNotification": true});
+}
+
+function showPoll(response){
+    put(response,{"ShowPoll" : true});
+}
+
+function updateStatistic(response){
+    var stat = {
+     "easy" : document.getElementById("easy").value,
+     "difficult" : document.getElementById("difficult").value,
+     "slow" : document.getElementById("slow").value,
+     "fast" : document.getElementById("fast").value,
+     "interesting"  :document.getElementById("interesting").value
+    };
+    put(response, JSON.stringify(stat));
+}
+/*
 function setAnimal(response) {
     var src = getCheckedRadio("animalImage");
     var width = parseInt(document.getElementById("animalWidth").value);
@@ -98,3 +121,4 @@ function mytext(response) {
 //  console.log("mytext::value = " + value);
     put(response, {"value" : value});
 }
+*/
