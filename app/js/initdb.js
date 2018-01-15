@@ -1,4 +1,5 @@
-// nur kopiert, zeug passiert noch
+// raw copy, shits will get done
+
 var popupIsOpen = false;
 var popupContent = "";
 
