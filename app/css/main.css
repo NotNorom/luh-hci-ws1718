@@ -202,6 +202,24 @@ ABSTIMMUNG PAGE
     grid-area: b;
 }
 
+/*
+FEEDBACK
+ */
+
+.feedback main {
+    overflow-y: scroll;
+}
+
+.feedback .comment-wrapper {
+    background: #1775d1;
+    padding: 2vmin;
+    display: grid;
+}
+
+.feedback .voting-controls {
+    background-color: pink;
+}
+
 
 /*
 NOTIFICATION
