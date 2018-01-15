@@ -68,28 +68,24 @@ var dburl = "http://127.0.0.1:5984/" + dbname + "/";
 var handlers = {
     "session_id" : updateSessionID,     //send the session id to server
     "notification" : showNotification,  //activate pop up (true)
-    "abstimmung" : showPoll,            //Poll boolean == true
-    "statistik" : updateStatistic,      //send the characteristic
+    "poll" : showPoll,            //Poll boolean == true
+    "statistic" : updateStatistic,      //send the characteristic
     // add further handlers here
 };
 
-function updateSessionID(response){
-    put(response,{"SessionID": document.getElementById("sessionid").value});
+function updateSessionID(response) {
+    put(response, {"SessionID": document.getElementById("sessionid").value});
 }
 
-function showNotification(response){
-    if(document.getElementById("vote").checked === true){
-        put(response,{"ShowNotification": true});
-    } else {
-        put(response,{"ShowNotification": false});
-    }
+function showNotification(response) {
+    put(response, {"ShowNotification": document.getElementById("vote").checked});
 }
 
-function showPoll(response){
-    put(response,{"ShowPoll" : true});
+function showPoll(response) {
+    put(response, {"ShowPoll": true});
 }
 
-function updateStatistic(response){
+function updateStatistic(response) {
     var stat = {
      "easy" : document.getElementById("easy").value,
      "difficult" : document.getElementById("difficult").value,
@@ -99,30 +95,3 @@ function updateStatistic(response){
     };
     put(response, JSON.stringify(stat));
 }
-/*
-function setAnimal(response) {
-    var src = getCheckedRadio("animalImage");
-    var width = parseInt(document.getElementById("animalWidth").value);
-    // console.log(src);
-    // console.log(width);
-    put(response, {"src" : src, "width" : width});
-}
-
-function stepCounter(response) {
-    var value = response.value ? response.value : 0;
-    // console.log(value);
-    put(response, {"value" : value + 1});
-}
-
-function showCounter(response) {
-    var checked = document.getElementById("showCounter").checked;
-    // console.log(checked);
-    put(response, {"checked" : checked});
-}
-
-function mytext(response) {
-    var value = document.getElementById("mytext").value;
-//  console.log("mytext::value = " + value);
-    put(response, {"value" : value});
-}
-*/
