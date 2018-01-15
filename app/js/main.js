@@ -48,15 +48,13 @@ function updateSessionID(response) {
 }
 
 function showNotification(response) {
-    var elems = document.getElementsByClassName("notification");
+    var elem = document.getElementById("notification");
+    var content = document.getElementById("notification_content");
     if (response["show_notification"]) {
-        for (var i = elems.length - 1; i >= 0; i--) {
-            elems[i].classList.add("active");
-        }
+        elem.classList.add("active");
+        content.innerText = response["notification_content"];
     } else {
-        for (var i = elems.length - 1; i >= 0; i--) {
-            elems[i].classList.remove("active");
-        }
+        elem.classList.remove("active");
     }
 }
 
@@ -72,7 +70,7 @@ function updateStatistic(response) {
         response["fast"],
         response["interesting"]
     ];
-    chart.update(0);
+    chart.update();
 }
 
 function updateComments(response) {

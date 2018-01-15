@@ -278,9 +278,10 @@ FEEDBACK
 NOTIFICATION
  */
 
-.notification {
+#notification {
     position: fixed;
     top: -20vh;
+    opacity: 0.0;
     left: 0;
     background-color: #8e0038;
     width: 100vw;
@@ -291,12 +292,13 @@ NOTIFICATION
     animation: notification-blink 2s ease-in-out 0s infinite alternate;
 }
 
-.notification.active {
+#notification.active {
     top: 0;
     padding: 3vh 0;
+    opacity: 1.0;
 }
 
-.notification a {
+#notification a {
     color: #fff;
 }
 
