@@ -19,30 +19,30 @@
         </form>
 
         <form>
-        	<label for="sessionid">Session ID:</label>
-        	<input type="text" name="randomSessionId" id="sessionid" oninput=""><br/>
+        	<label for="session_id">Session ID:</label>
+        	<input type="text" name="session_d" id="session_id" onchange="set('session_id')"><br/>
             <hr>
         	<label for="notification_setup"><h4>Benachrichtigungen:</h4></label>
         	<div id="notification_setup">
-        		<input type="checkbox" id="notification_checkbox" onclick="">Push-Benachrichtigung anzeigen<br/>
+        		<input type="checkbox" id="notification_checkbox" onchange="set('notification')">Push-Benachrichtigung anzeigen<br/>
         		<textarea name="notification_text" rows="4" cols="90" id="notification_text" oninput=""></textarea>
         	</div>
             <hr>
         	<label for="vote">Abstimmung:</label>
-        	<input type="checkbox" name="vote" id="vote" oninput="">Abstimmung anzeigen<br/>
+        	<input type="checkbox" name="vote" id="vote" onchange="set('poll')">Abstimmung anzeigen<br/>
             <hr>
         	<label for="vote_results"><h4>Abstimmungs Ergebnisse:</h4></label>
         	<div id="vote_results">
         		<label for="easy">leicht:</label>
-        		<input type="number" min="0" id="easy"><br/>
+        		<input type="number" min="0" value="0" id="easy" onchange="set('statistic')" oninput="set('statistic')"><br/>
         		<label for="difficult">schwer:</label>
-        		<input type="number" min="0" id="difficult"><br/>
+        		<input type="number" min="0" value="0" id="difficult" onchange="set('statistic')" oninput="set('statistic')"><br/>
         		<label for="slow">langsam:</label>
-        		<input type="number" min="0" id="slow"><br/>
+        		<input type="number" min="0" value="0" id="slow" onchange="set('statistic')" oninput="set('statistic')"><br/>
         		<label for="fast">schnell:</label>
-        		<input type="number" min="0" id="fast"><br/>
+        		<input type="number" min="0" value="0" id="fast" onchange="set('statistic')" oninput="set('statistic')"><br/>
         		<label for="interesting">interessant:</label>
-        		<input type="number" min="0" id="interesting"><br/>
+        		<input type="number" min="0" value="0" id="interesting" onchange="set('statistic')" oninput="set('statistic')"><br/>
         	</div>
             <hr>
             <label for="comments"><h4>Kommentare</h4></label>

@@ -74,24 +74,25 @@ var handlers = {
 };
 
 function updateSessionID(response) {
-    put(response, {"SessionID": document.getElementById("sessionid").value});
+    put(response, {"session_id": document.getElementById("session_id").value});
 }
 
 function showNotification(response) {
-    put(response, {"ShowNotification": document.getElementById("vote").checked});
+    put(response, {"show_notification": document.getElementById("notification_checkbox").checked});
 }
 
 function showPoll(response) {
-    put(response, {"ShowPoll": true});
+    put(response, {"show_poll": document.getElementById("vote").checked});
 }
 
 function updateStatistic(response) {
     var stat = {
-     "easy" : document.getElementById("easy").value,
-     "difficult" : document.getElementById("difficult").value,
-     "slow" : document.getElementById("slow").value,
-     "fast" : document.getElementById("fast").value,
-     "interesting"  :document.getElementById("interesting").value
+        "easy": document.getElementById("easy").value,
+        "difficult": document.getElementById("difficult").value,
+        "slow": document.getElementById("slow").value,
+        "fast": document.getElementById("fast").value,
+        "interesting": document.getElementById("interesting").value
     };
-    put(response, JSON.stringify(stat));
+    console.log("updateStatistic" + stat);
+    put(response, stat);
 }
