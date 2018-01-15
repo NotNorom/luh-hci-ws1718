@@ -78,7 +78,11 @@ function updateSessionID(response){
 }
 
 function showNotification(response){
-    put(response,{"ShowNotification": true});
+    if(document.getElementById("vote").checked === true){
+        put(response,{"ShowNotification": true});
+    } else {
+        put(response,{"ShowNotification": false});
+    }
 }
 
 function showPoll(response){
