@@ -13,10 +13,11 @@
         <h1>Wizard Interface</h1>
     </header>
     <main>
-    	<h2>Output</h2>
         <form>
           <input type="button" value="Create DB" id="create" onclick="createDB();"><br/>
         </form>
+
+        <hr>
 
         <form>
         	<label for="session_id">Session ID:</label>
@@ -46,26 +47,28 @@
         	</div>
             <hr>
             <label for="comments"><h4>Kommentare</h4></label>
-                <label for="comment_text">Kommentar 1 Text</label>
-                <textarea name="comment_text" rows="4" cols="90" id="comment_text" oninput=""></textarea>
-                <label for="score">Score</label>
-                <input type="number" name="score" min="0" id="score">
-                <label for="add_comment"></label>
-                <button id="add_comment">Kommentar Hinzufügen</button>
+                <label for="comment1_text">Kommentar 1 Text</label>
+                <textarea name="comment1_text" rows="4" cols="90" id="comment1_text" onchange="set('comments')" oninput="set('comments')"></textarea>
+                <label for="comment1_score">Score</label>
+                <input type="number" name="comment1_score" min="0" value="0" id="comment1_score" onchange="set('comments')">
+                <label for="comment1_add_comment">Kommentar anzeigen</label>
+                <input type="checkbox" onchange="set('comments')"  id="comment1_add_comment">
+                <br>
 
-                <label for="comment_text">Kommentar 2 Text</label>
-                <textarea name="comment_text" rows="4" cols="90" id="comment_text" oninput=""></textarea>
-                <label for="score">Score</label>
-                <input type="number" name="score" min="0" id="score">
-                <label for="add_comment"></label>
-                <button id="add_comment">Kommentar Hinzufügen</button>
+                <label for="comment2_text">Kommentar 2 Text</label>
+                <textarea name="comment2_text" rows="4" cols="90" id="comment2_text" onchange="set('comments')" oninput="set('comments')"></textarea>
+                <label for="comment2_score">Score</label>
+                <input type="number" name="comment2_score" min="0" value="0" id="comment2_score" onchange="set('comments')">
+                <label for="comment2_add_comment">Kommentar anzeigen</label>
+                <input type="checkbox" onchange="set('comments')"  id="comment2_add_comment">
+                <br>
           
-                <label for="comment_text">Kommentar 3 Text</label>
-                <textarea name="comment_text" rows="4" cols="90" id="comment_text" oninput=""></textarea>
-                <label for="score">Score</label>
-                <input type="number" name="score" min="0" id="score">
-                <label for="add_comment"></label>
-                <button id="add_comment">Kommentar Hinzufügen</button>
+                <label for="comment3_text">Kommentar 3 Text</label>
+                <textarea name="comment3_text" rows="4" cols="90" id="comment3_text" onchange="set('comments')" oninput="set('comments')"></textarea>
+                <label for="comment3_score">Score</label>
+                <input type="number" name="comment3_score" min="0" value="0" id="comment3_score" onchange="set('comments')">
+                <label for="comment3_add_comment">Kommentar anzeigen</label>
+                <input type="checkbox" onchange="set('comments')"  id="comment3_add_comment">
         </form>
     </main>
 </body>

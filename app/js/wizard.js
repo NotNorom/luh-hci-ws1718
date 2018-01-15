@@ -66,10 +66,11 @@ function createDB() {
 var dbname = "milfs";
 var dburl = "http://127.0.0.1:5984/" + dbname + "/";
 var handlers = {
-    "session_id" : updateSessionID,     //send the session id to server
-    "notification" : showNotification,  //activate pop up (true)
-    "poll" : showPoll,            //Poll boolean == true
-    "statistic" : updateStatistic,      //send the characteristic
+    "session_id": updateSessionID,     //send the session id to server
+    "notification": showNotification,  //activate pop up (true)
+    "poll": showPoll,            //Poll boolean == true
+    "statistic": updateStatistic,      //send the characteristic
+    "comments": updateComments,
     // add further handlers here
 };
 
@@ -78,7 +79,10 @@ function updateSessionID(response) {
 }
 
 function showNotification(response) {
-    put(response, {"show_notification": document.getElementById("notification_checkbox").checked});
+    put(response, {
+        "show_notification": document.getElementById("notification_checkbox").checked,
+        "notification_content": document.getElementById("notification_text").value
+    });
 }
 
 function showPoll(response) {
@@ -93,6 +97,29 @@ function updateStatistic(response) {
         "fast": document.getElementById("fast").value,
         "interesting": document.getElementById("interesting").value
     };
-    console.log("updateStatistic" + stat);
     put(response, stat);
+}
+
+function updateComments(response) {
+    var comments = {
+        "comment_1" : {
+            "content": document.getElementById("comment1_text").value,
+            "author": "Test Autor",
+            "timestamp": "1 Minute her",
+            "scrore": document.getElementById("comment1_score").value
+        },
+        "comment_2" : {
+            "content": document.getElementById("comment2_text").value,
+            "author": "Test Autor",
+            "timestamp": "3 Minuten her",
+            "scrore": document.getElementById("comment2_score").value
+        },
+        "comment_3" : {
+            "content": document.getElementById("comment3_text").value,
+            "author": "Test Autor",
+            "timestamp": "20 Minuten her",
+            "scrore": document.getElementById("comment3_score").value
+        },
+    };
+    put(response, comments);
 }
