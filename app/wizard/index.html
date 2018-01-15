@@ -21,17 +21,17 @@
         <form>
         	<label for="random_session_id">Session ID:</label>
         	<input type="text" name="randomSessionId" id="random_session_id" oninput=""><br/>
-
-        	<label for="notification_setup">Benachrichtigung:</label>
+            <hr>
+        	<label for="notification_setup"><h4>Benachrichtigungen:</h4></label>
         	<div id="notification_setup">
         		<input type="checkbox" id="notification_checkbox" onclick="">Push-Benachrichtigung anzeigen<br/>
         		<textarea name="notification_text" rows="4" cols="90" id="notification_text" oninput=""></textarea>
         	</div>
-
+            <hr>
         	<label for="vote">Abstimmung:</label>
         	<input type="checkbox" name="vote" id="vote" oninput="">Abstimmung anzeigen<br/>
-
-        	<label for="vote_results"></label>
+            <hr>
+        	<label for="vote_results"><h4>Abstimmungs Ergebnisse:</h4></label>
         	<div id="vote_results">
         		<label for="easy">leicht:</label>
         		<input type="number" min="0" id="easy"><br/>
@@ -44,6 +44,31 @@
         		<label for="interesting">interessant:</label>
         		<input type="number" min="0" id="interesting"><br/>
         	</div>
+            <hr>
+            <label for="comments"><h4>Kommentare</h4></label>
+                <label for="comment_text">Kommentar 1 Text</label>
+                <textarea name="comment_text" rows="4" cols="90" id="comment_text" oninput=""></textarea>
+                <label for="score">Score</label>
+                <input type="number" name="score" min="0" id="score">
+                <label for="add_comment"></label>
+                <button id="add_comment">Kommentar Hinzufügen</button>
+
+                <label for="comment_text">Kommentar 2 Text</label>
+                <textarea name="comment_text" rows="4" cols="90" id="comment_text" oninput=""></textarea>
+                <label for="score">Score</label>
+                <input type="number" name="score" min="0" id="score">
+                <label for="add_comment"></label>
+                <button id="add_comment">Kommentar Hinzufügen</button>
+          
+                <label for="comment_text">Kommentar 3 Text</label>
+                <textarea name="comment_text" rows="4" cols="90" id="comment_text" oninput=""></textarea>
+                <label for="score">Score</label>
+                <input type="number" name="score" min="0" id="score">
+                <label for="add_comment"></label>
+                <button id="add_comment">Kommentar Hinzufügen</button>
+
+           
+            
         	
 
         </form>
