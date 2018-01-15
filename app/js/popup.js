@@ -1,4 +1,4 @@
-var popupIsOpen = true;
+var popupIsOpen = false;
 var popupContent = "";
 
 function togglePopup() {
@@ -15,7 +15,7 @@ function togglePopup() {
         for (var i = elems.length - 1; i >= 0; i--) {
             elems[i].removeAttribute("hidden");
         }
-        fab[0].innerText = "X";
+        fab[0].innerText = "x";
         popupIsOpen = true;
     }
     console.log(elems);
