@@ -73,6 +73,10 @@ button.fab {
     z-index: 12;
 }
 
+button.fab:focus {
+    transform: none;
+}
+
 form>button,
 form>input,
 form>label {
