@@ -44,7 +44,7 @@ var handlers = {
 };
 
 function updateSessionID(response) {
-    console.log("updateSessinID: " + response);
+    //console.log("updateSessinID: " + response);
 }
 
 function showNotification(response) {
@@ -61,13 +61,20 @@ function showNotification(response) {
 }
 
 function showPoll(response) {
-    console.log("showPoll: " + response);
+    //console.log("showPoll: " + response);
 }
 
 function updateStatistic(response) {
-    console.log("updateStatistic: " + response);
+    chart.data.datasets[0].data = [
+        response["easy"],
+        response["difficult"],
+        response["slow"],
+        response["fast"],
+        response["interesting"]
+    ];
+    chart.update(0);
 }
 
 function updateComments(response) {
-    console.log("updateComments: " + response);
+    //console.log("updateComments: " + response);
 }
