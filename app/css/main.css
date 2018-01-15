@@ -208,16 +208,65 @@ FEEDBACK
 
 .feedback main {
     overflow-y: scroll;
+    grid-auto-rows: auto;
+    grid-gap: 2vmin;
+    max-width: calc(500px + 20vw);
 }
 
 .feedback .comment-wrapper {
     background: #1775d1;
     padding: 2vmin;
     display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-gap: 2vmin;
+    align-self: center;
+    justify-self: center;
+    grid-template-areas:
+    "a a a a"
+    "c c c b";
 }
 
-.feedback .voting-controls {
-    background-color: pink;
+.feedback .meta-info {
+    background: #63a3ff;
+    grid-area: a;
+    height: inherit;
+    padding: 2vmin;
+    box-sizing: border-box;
+}
+
+.feedback .meta-info .timestamp {
+    font-size: calc(6px + 1vmin);
+    color: #ddd;
+}
+
+.feedback p {
+    background: #63a3ff;
+    grid-area: c;
+    margin: 0;
+    padding: 2vmin;
+}
+
+.voting-controls {
+    grid-area: b;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.voting-controls button {
+    background: rgba(0, 0, 127, 0.2);
+    color: #fff;
+    flex-grow: 2;
+    margin: 0;
+    height: 8vh;
+    padding: 0 2vmin;
+}
+
+.voting-controls .votes {
+    height: 8vh;
+    line-height: 8vh;
 }
 
 
