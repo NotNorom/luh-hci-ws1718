@@ -10,7 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" integrity="sha256-c0m8xzX5oOBawsnLVpHnU2ieISOvxi584aNElFl2W6M=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/js/poll.js"></script>
 </head>
-<body class="abstimmung">
+<body class="poll">
     <header>
         <h1>Poll</h1>
         <nav><a href="/feedback">Feedback</a> | <a href="/login">Logout</a></nav>
@@ -18,23 +18,23 @@
     <main>
         <form action="/poll">
             <fieldset>
-                <input type="radio" name="abstimmung" value="A" id="abstimmung_a" hidden required>
-                <label for="abstimmung_a" class="blue1">A</label>
+                <input type="radio" name="poll" value="A" id="poll_a" hidden required>
+                <label for="poll_a" class="blue1">A</label>
             </fieldset>
 
             <fieldset>
-                <input type="radio" name="abstimmung" value="B" id="abstimmung_b" hidden required>
-                <label for="abstimmung_b" class="red1">B</label>
+                <input type="radio" name="poll" value="B" id="poll_b" hidden required>
+                <label for="poll_b" class="red1">B</label>
             </fieldset>
 
             <fieldset>
-                <input type="radio" name="abstimmung" value="C" id="abstimmung_c" hidden required>
-                <label for="abstimmung_c" class="green1">C</label>
+                <input type="radio" name="poll" value="C" id="poll_c" hidden required>
+                <label for="poll_c" class="green1">C</label>
             </fieldset>
 
             <fieldset>
-                <input type="radio" name="abstimmung" value="D" id="abstimmung_d" hidden required>
-                <label for="abstimmung_d" class="yellow1">D</label>
+                <input type="radio" name="poll" value="D" id="poll_d" hidden required>
+                <label for="poll_d" class="yellow1">D</label>
             </fieldset>
 
             <button type="submit">Abstimmen</button>                

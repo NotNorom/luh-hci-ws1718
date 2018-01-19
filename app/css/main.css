@@ -163,7 +163,7 @@ START PAGE
 ABSTIMMUNG PAGE
  */
 
-.abstimmung main {
+.poll main {
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 0px;
     grid-auto-rows: 42.5vh;
@@ -172,7 +172,7 @@ ABSTIMMUNG PAGE
         ". a a a a .";
 }
 
-.abstimmung form {
+.poll form {
     width: 60vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -186,7 +186,7 @@ ABSTIMMUNG PAGE
     "b b b b";
 }
 
-.abstimmung fieldset {
+.poll fieldset {
     border: none;
     padding: 0;
     padding-block-start: 0;
@@ -197,15 +197,15 @@ ABSTIMMUNG PAGE
     margin-inline-end: 0;
 }
 
-.abstimmung input[type="radio"] {
+.poll input[type="radio"] {
     display: none;
 }
 
-.abstimmung input[type="radio"]:checked + label {
+.poll input[type="radio"]:checked + label {
     box-shadow: 0 0 0 1vmin #fff inset;
 }
 
-.abstimmung label {
+.poll label {
     display: block;
     height: 100%;
     width: 100%;
@@ -214,7 +214,7 @@ ABSTIMMUNG PAGE
     cursor: pointer;
 }
 
-.abstimmung button {
+.poll button {
     padding: 2vmin;
     margin: 0;
     grid-area: b;
