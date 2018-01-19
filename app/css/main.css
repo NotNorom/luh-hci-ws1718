@@ -138,23 +138,23 @@ LOGIN PAGE
 START PAGE
  */
 
-.start main {
+.home main {
     grid-template-columns: 1fr;
     grid-gap: 0px;
 }
 
-.start .buttons {
+.home .buttons {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 1vmin;
 }
 
-.start .buttons button {
+.home .buttons button {
     box-sizing: border-box;
     padding: 0 1vmin;
 }
 
-.start .graph-wrapper {
+.home .graph-wrapper {
     height: 70vh;
 }
 
