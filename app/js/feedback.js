@@ -53,9 +53,9 @@ function updateComment(id, comment) {
     var comment_content = document.getElementById("comment_" + id + "_content");
 
     if (comment["show"]) {
-        comment_root.style.display = "grid";
+        comment_root.classList.remove("hidden");
     } else {
-        comment_root.style.display = "none";
+        comment_root.classList.add("hidden");
         return;
     }
 

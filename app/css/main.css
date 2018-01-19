@@ -229,6 +229,12 @@ FEEDBACK
     grid-template-areas:
     "a a a a"
     "c c c b";
+    width: 100%;
+    box-sizing: border-box;1
+}
+
+.feedback .comment-wrapper.hidden {
+    display: none;
 }
 
 .feedback .meta-info {
@@ -271,6 +277,27 @@ FEEDBACK
 .voting-controls .votes {
     height: 8vh;
     line-height: 8vh;
+}
+
+.feedback .popup {
+    overflow: hidden;
+}
+
+.feedback form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.feedback label {
+    font-size: calc(12px + 1vmin);
+}
+
+.feedback form textarea {
+    width: 100%;
+    flex-grow: 1;
+    box-sizing: border-box;
 }
 
 

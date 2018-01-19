@@ -16,7 +16,7 @@
         <h1>Feedback</h1>
     </header>
     <main>
-        <div class="comment-wrapper" id="comment_1">
+        <div class="comment-wrapper hidden" id="comment_1">
             <div class="meta-info">
                 <span class="username" id="comment_1_author"></span>
                 <span class="timestamp" id="comment_1_timestamp"></span>
@@ -28,7 +28,7 @@
                 <button class="downvote">↓</button>
             </div>
         </div>
-        <div class="comment-wrapper" id="comment_2">
+        <div class="comment-wrapper hidden" id="comment_2">
             <div class="meta-info">
                 <span class="username" id="comment_2_author"></span>
                 <span class="timestamp" id="comment_2_timestamp"></span>
@@ -40,7 +40,7 @@
                 <button class="downvote">↓</button>
             </div>
         </div>
-        <div class="comment-wrapper" id="comment_3">
+        <div class="comment-wrapper hidden" id="comment_3">
             <div class="meta-info">
                 <span class="username" id="comment_3_author"></span>
                 <span class="timestamp" id="comment_3_timestamp"></span>
@@ -59,13 +59,11 @@
     </div>
     <button class="fab" onclick="togglePopup();">+</button>
     <div class="popup-wrapper" hidden>
-        <div class="popup">
-            <form>
-                <label for="text">Kommentar</label>
-                <textarea id="text"></textarea>
-                <button onclick="sendComment();">Absenden</button>
-            </form>
-        </div>
+        <form class="popup">
+            <label for="text">Kommentar/ Frage abgeben</label>
+            <textarea id="text" rows="4" cols="10"></textarea>
+            <button>Absenden</button>
+        </form>
     </div>
 </body>
 </html>
