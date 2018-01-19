@@ -269,6 +269,10 @@ FEEDBACK
     grid-area: c;
     margin: 0;
     padding: 2vmin;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .voting-controls {
