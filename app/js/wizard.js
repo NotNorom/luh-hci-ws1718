@@ -106,19 +106,22 @@ function updateComments(response) {
             "content": document.getElementById("comment1_text").value,
             "author": "Test Autor",
             "timestamp": "1 Minute her",
-            "scrore": document.getElementById("comment1_score").value
+            "score": parseInt(document.getElementById("comment1_score").value),
+            "show": document.getElementById("comment1_show").checked
         },
         "comment_2" : {
             "content": document.getElementById("comment2_text").value,
             "author": "Test Autor",
             "timestamp": "3 Minuten her",
-            "scrore": document.getElementById("comment2_score").value
+            "score": parseInt(document.getElementById("comment2_score").value),
+            "show": document.getElementById("comment2_show").checked
         },
         "comment_3" : {
             "content": document.getElementById("comment3_text").value,
             "author": "Test Autor",
             "timestamp": "20 Minuten her",
-            "scrore": document.getElementById("comment3_score").value
+            "score": parseInt(document.getElementById("comment3_score").value),
+            "show": document.getElementById("comment3_show").checked
         },
     };
     put(response, comments);

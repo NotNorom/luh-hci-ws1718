@@ -40,5 +40,27 @@ var handlers = {
 };
 
 function updateComments(response) {
-    console.log(response);
+    updateComment(1, response["comment_1"]);
+    updateComment(2, response["comment_2"]);
+    updateComment(3, response["comment_3"]);
+}
+
+function updateComment(id, comment) {
+    var comment_root = document.getElementById("comment_" + id);
+    var comment_author = document.getElementById("comment_" + id + "_author");
+    var comment_timestamp = document.getElementById("comment_" + id + "_timestamp");
+    var comment_score = document.getElementById("comment_" + id + "_score");
+    var comment_content = document.getElementById("comment_" + id + "_content");
+
+    if (comment["show"]) {
+        comment_root.style.display = "grid";
+    } else {
+        comment_root.style.display = "none";
+        return;
+    }
+
+    comment_author.innerText = comment["author"];
+    comment_timestamp.innerText = comment["timestamp"];
+    comment_score.innerText = comment["score"];
+    comment_content.innerText = comment["content"];
 }
