@@ -54,7 +54,7 @@ function showNotification(response) {
 
 function showPoll(response) {
     if (response["show_poll"]) {
-        window.location.pathname = "/abstimmung";
+        window.location.pathname = "/poll";
     }
 }
 
