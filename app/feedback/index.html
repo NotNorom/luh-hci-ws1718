@@ -8,7 +8,8 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" integrity="sha256-c0m8xzX5oOBawsnLVpHnU2ieISOvxi584aNElFl2W6M=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/popup.js"></script>
+    <script type="text/javascript" src="/js/feedback.js"></script>
 </head>
 <body class="feedback">
     <header>
@@ -104,6 +105,16 @@
     <div class="notification">
         <!-- a href="/abstimmung">Abstimmung</a> | <a href="#">Schließen</a><br -->
         <span id="notification_content"></span>
+    </div>
+    <button class="fab" onclick="togglePopup();">+</button>
+    <div class="popup-wrapper" hidden>
+        <div class="popup">
+            <form>
+                <label for="text">Kommentar</label>
+                <textarea id="text"></textarea>
+                <button onclick="sendComment();">Absenden</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
