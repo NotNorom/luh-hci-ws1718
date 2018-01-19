@@ -36,16 +36,10 @@ var intervalID = setInterval(update, 1000);
 var dbname = "milfs";
 var dburl = "http://127.0.0.1:5984/" + dbname + "/";
 var handlers = {
-    "session_id": updateSessionID,
     "notification": showNotification,
     "poll": showPoll,
     "statistic": updateStatistic,
-    "comments": updateComments,
 };
-
-function updateSessionID(response) {
-    //console.log("updateSessinID: " + response);
-}
 
 function showNotification(response) {
     var elem = document.getElementById("notification");
@@ -59,7 +53,17 @@ function showNotification(response) {
 }
 
 function showPoll(response) {
-    //console.log("showPoll: " + response);
+    if (response["show_poll"]) {
+        if (window.location.pathname == "/abstimmung" || window.location.pathname == "/abstimmung/") {
+            return;
+        }
+        window.location.pathname = "/abstimmung";
+    } else {
+        if (window.location.pathname == "/") {
+            return;
+        }
+        window.location.pathname = "/";
+    }
 }
 
 function updateStatistic(response) {
@@ -71,8 +75,4 @@ function updateStatistic(response) {
         response["interesting"]
     ];
     chart.update();
-}
-
-function updateComments(response) {
-    //console.log("updateComments: " + response);
 }
