@@ -20,13 +20,27 @@ header {
     box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.2);
     width: 100vw;
     height: 10vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 2vmin;
+    box-sizing: border-box;
 }
 
 h1 {
     line-height: 10vh;
     margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: left;
+}
+
+nav {
+    line-height: 10vh;
+}
+
+nav a {
+    color: #fff;
 }
 
 main {
@@ -230,7 +244,7 @@ FEEDBACK
     "a a a a"
     "c c c b";
     width: 100%;
-    box-sizing: border-box;1
+    box-sizing: border-box;
 }
 
 .feedback .comment-wrapper.hidden {

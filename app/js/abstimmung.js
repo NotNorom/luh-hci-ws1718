@@ -36,31 +36,12 @@ var intervalID = setInterval(update, 1000);
 var dbname = "milfs";
 var dburl = "http://10.0.0.136:5984/" + dbname + "/";
 var handlers = {
-    "comments": updateComments,
+    "poll": showPoll,
 };
 
-function updateComments(response) {
-    updateComment(1, response["comment_1"]);
-    updateComment(2, response["comment_2"]);
-    updateComment(3, response["comment_3"]);
-}
 
-function updateComment(id, comment) {
-    var comment_root = document.getElementById("comment_" + id);
-    var comment_author = document.getElementById("comment_" + id + "_author");
-    var comment_timestamp = document.getElementById("comment_" + id + "_timestamp");
-    var comment_score = document.getElementById("comment_" + id + "_score");
-    var comment_content = document.getElementById("comment_" + id + "_content");
-
-    if (comment["show"]) {
-        comment_root.classList.remove("hidden");
-    } else {
-        comment_root.classList.add("hidden");
-        return;
+function showPoll(response) {
+    if (!response["show_poll"]) {
+        window.location.pathname = "/";
     }
-
-    comment_author.innerText = comment["author"];
-    comment_timestamp.innerText = comment["timestamp"];
-    comment_score.innerText = comment["score"];
-    comment_content.innerText = comment["content"];
 }

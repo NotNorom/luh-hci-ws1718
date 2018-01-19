@@ -64,7 +64,7 @@ function createDB() {
 // your code below
 
 var dbname = "milfs";
-var dburl = "http://127.0.0.1:5984/" + dbname + "/";
+var dburl = "http://10.0.0.136:5984/" + dbname + "/";
 var handlers = {
     "session_id": updateSessionID,     //send the session id to server
     "notification": showNotification,  //activate pop up (true)

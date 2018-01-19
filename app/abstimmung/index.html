@@ -8,31 +8,32 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" integrity="sha256-c0m8xzX5oOBawsnLVpHnU2ieISOvxi584aNElFl2W6M=" crossorigin="anonymous"></script>
-    <!-- script type="text/javascript" src="/js/main.js"></script -->
+    <script type="text/javascript" src="/js/abstimmung.js"></script>
 </head>
 <body class="abstimmung">
     <header>
         <h1>Abstimmung</h1>
+        <nav><a href="/feedback">Feedback</a> | <a href="/login">Logout</a></nav>
     </header>
     <main>
-        <form action="/">
+        <form action="/abstimmung">
             <fieldset>
-                <input type="radio" name="abstimmung" value="A" id="abstimmung_a" hidden>
+                <input type="radio" name="abstimmung" value="A" id="abstimmung_a" hidden required>
                 <label for="abstimmung_a" class="blue1">A</label>
             </fieldset>
 
             <fieldset>
-                <input type="radio" name="abstimmung" value="B" id="abstimmung_b" hidden>
+                <input type="radio" name="abstimmung" value="B" id="abstimmung_b" hidden required>
                 <label for="abstimmung_b" class="red1">B</label>
             </fieldset>
 
             <fieldset>
-                <input type="radio" name="abstimmung" value="C" id="abstimmung_c" hidden>
+                <input type="radio" name="abstimmung" value="C" id="abstimmung_c" hidden required>
                 <label for="abstimmung_c" class="green1">C</label>
             </fieldset>
 
             <fieldset>
-                <input type="radio" name="abstimmung" value="D" id="abstimmung_d" hidden>
+                <input type="radio" name="abstimmung" value="D" id="abstimmung_d" hidden required>
                 <label for="abstimmung_d" class="yellow1">D</label>
             </fieldset>
 

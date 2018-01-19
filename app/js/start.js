@@ -34,7 +34,7 @@ var intervalID = setInterval(update, 1000);
 // your code below
 
 var dbname = "milfs";
-var dburl = "http://127.0.0.1:5984/" + dbname + "/";
+var dburl = "http://10.0.0.136:5984/" + dbname + "/";
 var handlers = {
     "notification": showNotification,
     "poll": showPoll,
@@ -54,15 +54,7 @@ function showNotification(response) {
 
 function showPoll(response) {
     if (response["show_poll"]) {
-        if (window.location.pathname == "/abstimmung" || window.location.pathname == "/abstimmung/") {
-            return;
-        }
         window.location.pathname = "/abstimmung";
-    } else {
-        if (window.location.pathname == "/") {
-            return;
-        }
-        window.location.pathname = "/";
     }
 }
 
