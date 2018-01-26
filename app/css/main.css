@@ -16,7 +16,7 @@ body {
 }
 
 header {
-    background: #1775d1;
+    background: rgba(69,90,100 ,1);
     box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.2);
     width: 100vw;
     height: 10vh;
@@ -75,8 +75,8 @@ button:active, button:focus {
 }
 
 button.fab {
-    box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.2);
-    background: #c51162;
+    box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.2);
+    background: rgba(126,87,194 ,1);
     position: fixed;
     color: #fff;
     bottom: 4vh;
@@ -109,7 +109,7 @@ form>input {
 }
 
 form {
-    background-color: #1775d1;
+    background-color: rgba(126,87,194 ,1);
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
     padding: 3vmin 4vmin;
 }
@@ -173,6 +173,7 @@ ABSTIMMUNG PAGE
 }
 
 .poll form {
+    background-color: rgba(255, 255, 255, 0.5);
     width: 60vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -232,7 +233,7 @@ FEEDBACK
 }
 
 .comments .comment-wrapper {
-    background: #1775d1;
+    background: rgba(69,90,100 ,1);
     padding: 2vmin;
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -252,7 +253,8 @@ FEEDBACK
 }
 
 .comments .meta-info {
-    background: #63a3ff;
+    //background: #63a3ff;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
     grid-area: a;
     height: inherit;
     padding: 2vmin;
@@ -265,7 +267,7 @@ FEEDBACK
 }
 
 .comments p {
-    background: #63a3ff;
+    //background: #63a3ff;
     grid-area: c;
     margin: 0;
     padding: 2vmin;
@@ -276,6 +278,7 @@ FEEDBACK
 }
 
 .voting-controls {
+    font-size: calc(12px + 1vmin);
     grid-area: b;
     display: flex;
     flex-direction: column;
@@ -284,7 +287,7 @@ FEEDBACK
 }
 
 .voting-controls button {
-    background: rgba(0, 0, 127, 0.2);
+    background: transparent;
     color: #fff;
     flex-grow: 2;
     margin: 0;
@@ -292,7 +295,29 @@ FEEDBACK
     padding: 0 2vmin;
 }
 
+.voting-controls button:hover, .voting-controls button:focus {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.voting-controls .upvote::after {
+    content: '△';
+}
+
+.voting-controls .upvote:hover::after, .voting-controls .upvote:focus::after {
+    content: '▲';
+}
+
+.voting-controls .downvote::after {
+    content: '▽';
+}
+
+.voting-controls .downvote:hover::after, .voting-controls .downvote:focus::after {
+    content: '▼';
+}
+
 .voting-controls .votes {
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
     height: 8vh;
     line-height: 8vh;
 }
@@ -373,7 +398,7 @@ POPUP
 }
 
 .popup {
-    background: #1775d1;
+    background: rgba(126,87,194 ,1);
     width: 80vw;
     height: 70vh;
     margin: 15vh auto;
@@ -387,74 +412,47 @@ POPUP
 COLORS
  ******************************/
 
-.blue1 {
+.blue {
     background-color: rgba(92, 107, 192, 1);
     color: #fff;
 }
 
-.blue1:hover {
+.blue:hover {
     background-color: rgba(92, 107, 192, 0.6);
 }
 
-.blue2 {
-    background-color: rgba(121, 134, 203, 1);
-    color: #fff;
-}
-
-.blue2:hover {
-    background-color: rgba(121, 134, 203, 0.6);
-}
-
-.red1 {
+.red {
     background-color: rgba(239, 83, 80, 1);
     color: #fff;
 }
 
-.red1:hover {
+.red:hover {
     background-color: rgba(239, 83, 80, 0.6);
 }
 
-.red2 {
-    background-color: rgba(229, 115, 115, 1);
+.orange {
+    background-color: rgba(255,112,67 ,1);
     color: #fff;
 }
 
-.red2:hover {
-    background-color: rgba(229, 115, 115, 0.6);
+.orange:hover {
+    background-color: rgba(255,112,67 ,0.6);
 }
 
-.green1 {
+.green {
     background-color: rgba(102, 187, 106, 1);
     color: #fff;
 }
 
-.green1:hover {
+.green:hover {
     background-color: rgba(102, 187, 106, 0.6);
 }
 
-.green2 {
-    background-color: rgba(129, 199, 132, 1);
+.purple {
+    background-color: rgba(126,87,194 ,1);
     color: #fff;
 }
 
-.green2:hover {
-    background-color: rgba(129, 199, 132, 0.6);
-}
-
-.yellow1 {
-    background-color: rgba(255,202,40 ,1);
-    color: #2c2c2c;
-}
-
-.yellow1:hover {
-    background-color: rgba(255, 202, 40, 0.6);
-}
-
-.yellow2 {
-    background-color: rgba(255, 213, 79, 1);
-    color: #2c2c2c;
-}
-
-.yellow2:hover {
-    background-color: rgba(255, 213, 79, 0.6);
+.purple:hover {
+    background-color: rgba(126,87,194 ,0.6);
 }
