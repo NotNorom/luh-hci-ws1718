@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Start | Meaningful Interactive Lecture Feedback System</title>
+    <title>Dozent | Meaningful Interactive Lecture Feedback System</title>
 
     <link rel="stylesheet" type="text/css" href="/css/main.css">
 
@@ -12,26 +12,24 @@
     <script type="text/javascript" src="/js/chart.js"></script>
     <script type="text/javascript" src="/js/home.js"></script>
 </head>
-<body class="home" onload="createChart();">
+<body class="dozent" onload="createChart();">
     <header>
-        <h1>Home</h1>
-        <nav><a href="/">Home</a> | <a href="/comments">Comments</a> | <a href="/login">Logout</a></nav>
+        <h1>Dozent</h1>
+        <nav><a href="/login">Logout</a></nav>
     </header>
     <main>
-        <div class="buttons">
-            <button class="blue1">leicht</button>
-            <button class="blue2">schwer</button>
-            <button class="red1">langsam</button>
-            <button class="red2">schnell</button>
-            <button class="green1">interessant</button>
-        </div>
         <div class="graph-wrapper">
             <canvas class="graph" id="graph"></canvas>
         </div>
     </main>
-    <div id="notification">
-        <!--a href="/abstimmung">Abstimmung</a> | <a href="#">Schließen</a><br -->
+    <!-- div id="notification">
         <span id="notification_content"></span>
+    </div -->
+    <button class="fab" onclick="togglePopup();">+</button>
+    <div class="popup-wrapper" hidden>
+        <div class="popup">
+            hello, I am a popup
+        </div>
     </div>
 </body>
 </html>

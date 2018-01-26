@@ -34,7 +34,7 @@ var intervalID = setInterval(update, 1000);
 // your code below
 
 var dbname = "milfs";
-var dburl = "http://10.0.0.136:5984/" + dbname + "/";
+var dburl = "http://10.0.0.218:5984/" + dbname + "/";
 var handlers = {
     "notification": showNotification,
     "poll": showPoll,

@@ -224,14 +224,14 @@ ABSTIMMUNG PAGE
 FEEDBACK
  */
 
-.feedback main {
+.comments main {
     overflow-y: scroll;
     grid-auto-rows: auto;
     grid-gap: 2vmin;
     max-width: calc(500px + 20vw);
 }
 
-.feedback .comment-wrapper {
+.comments .comment-wrapper {
     background: #1775d1;
     padding: 2vmin;
     display: grid;
@@ -247,11 +247,11 @@ FEEDBACK
     box-sizing: border-box;
 }
 
-.feedback .comment-wrapper.hidden {
+.comments .comment-wrapper.hidden {
     display: none;
 }
 
-.feedback .meta-info {
+.comments .meta-info {
     background: #63a3ff;
     grid-area: a;
     height: inherit;
@@ -259,12 +259,12 @@ FEEDBACK
     box-sizing: border-box;
 }
 
-.feedback .meta-info .timestamp {
+.comments .meta-info .timestamp {
     font-size: calc(6px + 1vmin);
     color: #ddd;
 }
 
-.feedback p {
+.comments p {
     background: #63a3ff;
     grid-area: c;
     margin: 0;
@@ -297,22 +297,22 @@ FEEDBACK
     line-height: 8vh;
 }
 
-.feedback .popup {
+.comments .popup {
     overflow: hidden;
 }
 
-.feedback form {
+.comments form {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
 }
 
-.feedback label {
+.comments label {
     font-size: calc(12px + 1vmin);
 }
 
-.feedback form textarea {
+.comments form textarea {
     width: 100%;
     flex-grow: 1;
     box-sizing: border-box;
